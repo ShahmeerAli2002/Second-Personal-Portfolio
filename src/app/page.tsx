@@ -5,7 +5,7 @@ import About from './about/page'
 import Media from './socialmedia/page'
 import Projects from './projectme/pages'
 import Contact from './contact/page'
-import Footer from './components/footer'
+
 
 
 const page = () => {
@@ -17,7 +17,7 @@ const page = () => {
       <Media/>
       <Projects/>
       <Contact/>
-      <Footer/>
+     
 
 
      
