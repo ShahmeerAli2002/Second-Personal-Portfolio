@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const Projects: React.FC = () => {
   const projects = [
@@ -52,17 +53,19 @@ const Projects: React.FC = () => {
       <h2 className="text-5xl font-bold mb-8 dark:text-white bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Projects</h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
         {projects.map((project, index) => (
-          <div className="bg-gradient-to-br from-blue-500 to-purple-500 p-[2px] rounded-lg hover:from-purple-500 hover:to-blue-500">
+          <div key={index} className="bg-gradient-to-br from-blue-500 to-purple-500 p-[2px] rounded-lg hover:from-purple-500 hover:to-blue-500">
             <motion.div
-              key={index}
               className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 h-full w-full"
               whileHover={{ scale: 1.05 }}
             >
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className="w-full h-48 object-cover rounded-lg mb-4"
-              />
+              <div className="relative w-full h-48 mb-4">
+                <Image 
+                  src={project.image} 
+                  alt={project.title}
+                  fill
+                  className="object-cover rounded-lg"
+                />
+              </div>
               <h3 className="text-xl font-semibold mb-2 dark:text-gray-100">
                 {project.title}
               </h3>
