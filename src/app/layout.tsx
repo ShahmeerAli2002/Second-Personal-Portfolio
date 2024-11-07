@@ -8,7 +8,7 @@ import Footer from "./components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "second Persoal Portfolio",
+  title: "Second Persoal Portfolio",
   description: "A refined and visually engaging portfolio by Shahmeer Ali, crafted with Tailwind CSS to showcase skills and projects in a clean, modern layout",
 };
 
