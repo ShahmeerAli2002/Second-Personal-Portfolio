@@ -1,30 +1,86 @@
-import React from 'react'
-import Link from 'next/link'
+"use client"
 
+import React from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
-const About = () => {
+const About: React.FC = () => {
   return (
-    
-    
-    <div className=' bg-gradient-to-r from-violet-500 to-fuchsia-500 h-15'>
-      <div className=' text-white flex justify-between items-center' >
-    <h1 className='text-xl m-2 ml-28'>jazz cash</h1>
-    <ul className='flex gap-10 ml-24'>
-        <Link href="/" className='relative  before:absolute before:left-0 before:bottom-0 before:w-full before:h-0.5 before:bg-blue-500 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 hover:before:scale-x-100'>Home</Link>
-        <Link href="about">About</Link>
-        <Link href="contact">Contact</Link>
-        <Link href="Helpline">Helpline</Link>
-    </ul>
-   
+    <motion.section
+      id="about"
+      className="py-20 px-6 text-center bg-gradient-to-b from-white to-gray-100 dark:from-black dark:to-black dark:text-gray-100 text-gray-900"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+    >
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          <h2 className="text-5xl font-bold mb-8 dark:text-white bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">About Me</h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <motion.p 
+                className="text-lg leading-relaxed dark:text-gray-300 backdrop-blur-sm bg-white/10 p-6 rounded-xl shadow-lg"
+                whileHover={{ scale: 1.02 }}
+              >
+                I am a dedicated developer with a passion for creating user-centered designs. With 7 months of experience in web development, I specialize in building responsive and performant applications using modern technologies.
+              </motion.p>
+              <motion.p 
+                className="text-lg leading-relaxed dark:text-gray-300 backdrop-blur-sm bg-white/10 p-6 rounded-xl shadow-lg"
+                whileHover={{ scale: 1.02 }}
+              >
+                My expertise includes React, Next.js, TypeScript, and various modern web frameworks. I've been actively working with these technologies for 7 months, continuously learning and adapting to deliver the best possible solutions.
+              </motion.p>
+              <div className="flex flex-wrap justify-center gap-4 mt-6">
+                <motion.div 
+                  className="bg-gradient-to-br from-blue-500 to-purple-500 p-[2px] rounded-lg hover:from-purple-500 hover:to-blue-500 transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg h-full">
+                    <h3 className="font-semibold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">HTML</h3>
+                    <p className="text-sm">HTML5, Semantic HTML</p>
+                  </div>
+                </motion.div>
+                <motion.div 
+                  className="bg-gradient-to-br from-blue-500 to-purple-500 p-[2px] rounded-lg hover:from-purple-500 hover:to-blue-500 transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="bg-white dark:bg-black p-4 rounded-lg h-full">
+                    <h3 className="font-semibold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">CSS & JavaScript</h3>
+                    <p className="text-sm">CSS, JavaScript,git</p>
+                  </div>
+                </motion.div>
+                <motion.div 
+                  className="bg-gradient-to-br from-blue-500 to-purple-500 p-[2px] rounded-lg hover:from-purple-500 hover:to-blue-500 transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="bg-white dark:bg-gray-800 p-4 rounded-lg h-full">
+                    <h3 className="font-semibold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Modern Tech</h3>
+                    <p className="text-sm">TypeScript, Next.js, Tailwind CSS</p>
+                  </div>
+                </motion.div>
+              </div>
+            </div>            <motion.div
+              className="relative h-[400px] rounded-xl overflow-hidden shadow-2xl ring-4 ring-purple-500/30"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Image
+                src="/image/profile.jpg"
+                alt="Profile Image"
+                fill
+                className="object-cover hover:scale-110 transition-transform duration-500"
+                priority
+              />
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
-     
+    </motion.section>
+  );
+};
 
-      
-     </div>
-     
-  )
-}
-
-export default About
-
-
+export default About;

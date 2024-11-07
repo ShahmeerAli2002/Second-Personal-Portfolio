@@ -1,35 +1,27 @@
-import About from "./about/page";
-import Box from "./box/page";
-import Footer from "./footer/page";
+import React from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/hero'
+import About from './about/page'
+import Media from './socialmedia/page'
+import Projects from './projectme/pages'
+import Contact from './contact/page'
 
-export default function Home() {
+
+const page = () => {
   return (
- 
- 
-     <div>
+    <div>
+      <Navbar/>
+      <Hero/>
+      <About/>
+      <Media/>
+      <Projects/>
+      <Contact/>
 
-    <header> <About/></header>
-    <br />
-    <br />
-    <br />
-    <br />
-    
-     <section> <Box/></section>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
 
-     <Footer/>
-     
-  
-    
-     </div>
      
 
-  )}
-   
+    </div>
+  )
+}
+
+export default page
