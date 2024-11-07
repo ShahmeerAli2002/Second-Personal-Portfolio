@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <h2 className="text-5xl font-bold mb-8 dark:text-white bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Contact Me</h2>
+      <h2 className="text-2xl font-bold mb-8 dark:text-white bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Contact Me</h2>
       <p className="text-lg mb-8">Feel free to reach out to me via the details below:</p>
 
       <div className="space-y-6 max-w-md mx-auto">
