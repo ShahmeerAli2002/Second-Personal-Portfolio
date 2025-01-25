@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
+import ResumeViewer from '../components/resum';
 const Projects: React.FC = () => {
   const projects = [
     {
@@ -15,13 +15,13 @@ const Projects: React.FC = () => {
       title: "Resume Builder",
       description: "Create professional resumes with customizable templates and real-time preview.",
       link: "https://update-milestone-5-unique-path-and-shareable-link.vercel.app/",
-      image: "/image/project2.png"
+      image: "/image/project3.png"
     },
     {
       title: "Portfolio Website",
       description: "Personal portfolio showcase.",
       link: "https://my-portfolio-dusky-xi-83.vercel.app/",
-      image: "/image/project3.png"
+      image: "/image/project2.png"
     },
     {
       title: "Portfolio2 Website",
@@ -40,16 +40,37 @@ const Projects: React.FC = () => {
       description: "Interactive gaming platform with multiplayer features, game reviews, and community forums.",
       link: "https://tailwindcss-nextjs-website.vercel.app/",
       image: "/image/project5.png"
-    }
-  ];
+    },
+    {
+      title: "Blog Website",
+      description: "A modern blog platform with dynamic content management,  and responsive design for an optimal reading experience.",
+      link: "https://dynamic-blogs-pages.vercel.app/",
+      image: "/image/project7.png"
+    },
+    {
+      title: "Blog Platform with Authentication",
+      description: "A fully functional blog website with user authentication, content management, commenting system, and personalized user profiles.",
+      link: "https://full-functionality-blog.vercel.app/",
+      image: "/image/project8.png"
+    },
+    {
+
+
+      title: "Furniture Marketplace",
+      description: "E-commerce platform for furniture shopping with marketplace features, product listings, and secure transactions.",
+      link: "https://figma-ui-hackathon-rhan.vercel.app/",
+      image: "/image/project9.png"
+
+    }  ];
   return (
+   
     <motion.section
       id="projects"
       className="py-20 px-6 text-center bg-gray-100 dark:bg-black text-gray-900 dark:text-gray-100"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-    >
+    > <ResumeViewer/>
       <h2 className="text-2xl font-bold mb-8 dark:text-white bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">Projects</h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
         {projects.map((project, index) => (

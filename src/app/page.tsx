@@ -11,7 +11,9 @@ import Contact from './contact/page'
 const page = () => {
   return (
     <div>
-      <Navbar/>
+      
+      {/* <Navbar/> */}
+      
       <Hero/>
       <About/>
       <Media/>

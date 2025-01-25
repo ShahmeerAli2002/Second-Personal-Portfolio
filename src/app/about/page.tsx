@@ -32,7 +32,18 @@ const About: React.FC = () => {
                 className="text-lg leading-relaxed dark:text-gray-300 backdrop-blur-sm bg-white/10 p-6 rounded-xl shadow-lg"
                 whileHover={{ scale: 1.02 }}
               >
-                My expertise includes React, Next.js, TypeScript, and various modern web frameworks. I've been actively working with these technologies for 7 months, continuously learning and adapting to deliver the best possible solutions.
+                Frontend Web Developer
+Experience: Over 6 months of dedicated learning and hands-on
+practice with modern web development technologies, including
+HTML, CSS, JavaScript, and TypeScript.
+ Next.js Development: Expertise in server-side rendering,
+dynamic routing, and building scalable web applications.
+ Tailwind CSS: Proficient in creating responsive, utility-first
+designs efficiently.
+ Framer Motion: Skilled in implementing smooth and dynamic
+animations for enhanced user interfaces.
+ State Management: Experienced with Zustand and Redux for
+managing application state effectively.
               </motion.p>
               <div className="flex flex-wrap justify-center gap-4 mt-6">
                 <motion.div 
@@ -69,7 +80,7 @@ const About: React.FC = () => {
               transition={{ duration: 0.3 }}
             >
               <Image
-                src="/image/profile.jpg"
+                src="/image/shahmeer.jpeg"
                 alt="Profile Image"
                 fill
                 className="object-cover hover:scale-110 transition-transform duration-500"

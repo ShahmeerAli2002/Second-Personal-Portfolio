@@ -27,6 +27,7 @@ const Navbar: React.FC = () => {
             {darkMode ? (
               <>
                 <span>☀️</span>
+                
                 <span className="hidden sm:inline">Light Mode</span>
               </>
             ) : (
